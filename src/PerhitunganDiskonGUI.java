@@ -1,3 +1,8 @@
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,6 +21,59 @@ public class PerhitunganDiskonGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    private void intComponents() {
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        
+        jTextFieldHargaAsli = new javax.swing.JTextField();
+        jTextFieldKodeKupon = new javax.swing.JTextField();
+        jTextFieldKodeKupon.setEditable(true);
+        
+        jSliderDiskon = new javax.swing.JSlider(5, 30, 5);
+         // Pengaturan JSlider Diskon
+        jSliderDiskon.setMajorTickSpacing(5);
+        jSliderDiskon.setPaintTicks(true);
+        jSliderDiskon.setPaintLabels(true);
+        
+       
+        jButtonHitung = new javax.swing.JButton();
+        jLabelHargaAkhir = new javax.swing.JTextField();
+        jLabelPenghematan = new javax.swing.JTextField();
+        
+         // Label untuk Harga Asli
+        jLabel1.setText("Harga Asli:");
+
+        // Label untuk Diskon (%)
+        jLabel2.setText("Diskon (%):");
+
+        // Label untuk Harga Akhir
+        jLabel3.setText("Harga Akhir:");
+
+        // Label untuk Penghematan
+        jLabel4.setText("Penghematan:");
+        
+        // Label untuk Kode Kupon
+        jLabel6.setText("Kode Kupon:");
+        
+        
+        jButtonHitung.setText("Hitung");
+         jButtonHitung.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                jButtonHitungActionPerformed(evt);
+            }
+
+            private void jButtonHitungActionPerformed(ActionEvent evt) {
+                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+        });
+         
+        jLabelHargaAkhir.setText("Rp. 0");
+        jLabelPenghematan.setText("Rp. 0");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -25,21 +83,196 @@ public class PerhitunganDiskonGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldHargaAsli = new javax.swing.JTextField();
+        jLabelPenghematan = new javax.swing.JTextField();
+        jButtonHitung = new javax.swing.JButton();
+        jLabelHargaAkhir = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaRiwayat = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldKodeKupon = new javax.swing.JTextField();
+        jSliderDiskon = new javax.swing.JSlider();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel1.setText("Harga Asli");
+
+        jLabel2.setText("Diskon %");
+
+        jLabel3.setText("Harga Akhir");
+
+        jLabel4.setText("Penghemat");
+
+        jTextFieldHargaAsli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldHargaAsliActionPerformed(evt);
+            }
+        });
+
+        jLabelPenghematan.setEditable(false);
+
+        jButtonHitung.setText("Hitung");
+        jButtonHitung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHitungActionPerformed(evt);
+            }
+        });
+
+        jLabelHargaAkhir.setEditable(false);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Aplikasi Penghitung Diskon");
+
+        jTextAreaRiwayat.setColumns(20);
+        jTextAreaRiwayat.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaRiwayat);
+
+        jLabel6.setText("Kode Kupon");
+
+        jSliderDiskon.setMajorTickSpacing(5);
+        jSliderDiskon.setMaximum(20);
+        jSliderDiskon.setMinimum(5);
+        jSliderDiskon.setPaintLabels(true);
+        jSliderDiskon.setPaintTicks(true);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelPenghematan, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelHargaAkhir, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHitung, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(138, 138, 138)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldKodeKupon, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jSliderDiskon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldHargaAsli, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextFieldHargaAsli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jSliderDiskon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextFieldKodeKupon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonHitung)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabelHargaAkhir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabelPenghematan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHitungActionPerformed
+        String inputHarga = jTextFieldHargaAsli.getText();
+        double hargaAsli;
+        try {
+            hargaAsli = Double.parseDouble(inputHarga); // Validasi input agar hanya angka
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Masukkan harga asli yang valid.");
+            return;
+        }
+        
+         // Mengambil persentase diskon dari JSlider
+        int diskonInt = jSliderDiskon.getValue();
+        double diskon = diskonInt / 100.0;
+        
+        
+        // Mengambil kode kupon dan menambahkan diskon tambahan jika valid
+        String kodeKupon = jTextFieldKodeKupon.getText().trim();
+        double diskonKupon = 0.0;
+        if (kodeKupon.equalsIgnoreCase("DISKON10")) {
+            diskonKupon = 0.10; // Tambahan diskon 10%
+        } else if (kodeKupon.equalsIgnoreCase("DISKON20")) {
+            diskonKupon = 0.20; // Diskon tambahan 20%
+        }
+        
+         // Hitung total diskon gabungan
+        double totalDiskon = diskon + diskonKupon;
+
+        // Hitung jumlah penghematan dan harga akhir
+        double penghematan = hargaAsli * totalDiskon;
+        double hargaAkhir = hargaAsli - penghematan;
+
+        // Tampilkan hasil perhitungan
+        jLabelHargaAkhir.setText("Rp. " + String.format("%.2f", hargaAkhir));
+        jLabelPenghematan.setText("Rp. " + String.format("%.2f", penghematan));
+        
+         // Tambahkan hasil perhitungan ke riwayat
+        String riwayat = "Harga Asli: Rp. " + String.format("%.2f", hargaAsli) + 
+                         ", Diskon: " + diskonInt + "%" + 
+                         ", Kupon: " + (kodeKupon.isEmpty() ? "Tidak Ada" : kodeKupon) +
+                         ", Penghematan: Rp. " + String.format("%.2f", penghematan) + 
+                         ", Harga Akhir: Rp. " + String.format("%.2f", hargaAkhir);
+        jTextAreaRiwayat.append(riwayat + "\n");
+    }//GEN-LAST:event_jButtonHitungActionPerformed
+
+    private void jTextFieldHargaAsliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHargaAsliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldHargaAsliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +310,20 @@ public class PerhitunganDiskonGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonHitung;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField jLabelHargaAkhir;
+    private javax.swing.JTextField jLabelPenghematan;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSlider jSliderDiskon;
+    private javax.swing.JTextArea jTextAreaRiwayat;
+    private javax.swing.JTextField jTextFieldHargaAsli;
+    private javax.swing.JTextField jTextFieldKodeKupon;
     // End of variables declaration//GEN-END:variables
 }
